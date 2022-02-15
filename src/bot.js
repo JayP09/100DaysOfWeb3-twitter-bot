@@ -9,7 +9,7 @@ const config = require('./config')
 const TwitterBot = new Twit(config.twitterKeys)
 
 // filter the twitter public stream by the words provided
-var stream = TwitterBot.stream('statuses/filter', { track: [process.env.HASHTAG] })
+var stream = TwitterBot.stream('statuses/filter', { track: ['#100DaysOfWeb3'] })
 
 const retweetAndLike = () => stream.on('tweet', function (tweet) {
 
