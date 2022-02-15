@@ -96,9 +96,7 @@ people who already contributed to 100DaysOfWeb3 Bot
 
 ---
 
-## If you liked our work considering giving it a 🌟.
+## Show some ❤️ by starring this repo🌟.
 <p align="center">
   <img src="https://media.giphy.com/media/1n3LPr8tsptiIaFUhF/giphy.gif" />
 </p>
-
-
