@@ -1,0 +1,24 @@
+{
+  "name": "100daysofweb3bot",
+  "version": "1.0.0",
+  "description": "Twitter bot for #100DaysOfWeb3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JayP09/100DaysOfWeb3-twitter-bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JayP09/100DaysOfWeb3-twitter-bot/issues"
+  },
+  "homepage": "https://github.com/JayP09/100DaysOfWeb3-twitter-bot#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "twit": "^2.2.11"
+  }
+}
