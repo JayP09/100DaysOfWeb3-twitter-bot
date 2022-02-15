@@ -13,9 +13,5 @@ module.exports = {
     consumer_secret: process.env.TWITTER_API_SECRET,
     access_token: process.env.TWITTER_ACCESS_TOKEN,
     access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
-  },
-  twitterConfig: {
-    queryString: process.env.QUERY_STRING,
-    username: process.env.TWITTER_USERNAME,
   }
 }
