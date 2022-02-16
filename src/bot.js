@@ -13,7 +13,7 @@ var stream = TwitterBot.stream("statuses/filter", {
     track: ["#100DaysOfWeb3"],
 });
 
-const retweetAndLike = () => (
+const retweetAndLike = () =>
     stream.on("tweet", function (tweet) {
         let retweetID = tweet.id_str;
 
@@ -64,12 +64,6 @@ const retweetAndLike = () => (
                 }
             );
         }
-    }),
-    //delete the tweet reply
-    stream.on("delete", function (deleteMessage) {
-        console.log(deleteMessage);
-        let deleteID = deleteMessage.delete.status.id_str;
-    })
-);
+    });
 
 retweetAndLike();
