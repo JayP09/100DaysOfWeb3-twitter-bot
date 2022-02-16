@@ -17,7 +17,9 @@ var botAccounts = ['LebotPython','RobotProud','100xcode','KeepCoding_Bot','xaelb
 
 const retweetAndLike = () =>
     stream.on("tweet", function (tweet) {
+        console.log("==> Tweet Received")
         let retweetID = tweet.id_str;
+        console.log(botAccounts.indexOf(tweet.user.screen_name))
         // Retweet Tweet with id "retweetID"
         if (botAccounts.indexOf(tweet.user.screen_name) !== -1) {
             TwitterBot.post(
