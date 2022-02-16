@@ -13,8 +13,6 @@ var stream = TwitterBot.stream("statuses/filter", {
     track: ["#100DaysOfWeb3"],
 });
 
-var botAccounts = ['LebotPython','RobotProud','100xcode','KeepCoding_Bot','xaelbot','Bills_Bot','_100DaysOfWeb3','100daysofcoders','IamEmmaBot','2Bftawfik']
-
 const retweetAndLike = () =>
     stream.on("tweet", function (tweet) {
         console.log("==> Tweet Received")
@@ -22,7 +20,7 @@ const retweetAndLike = () =>
         let retweetID = tweet.id_str;
 
         // Retweet Tweet with id "retweetID"
-        if (botAccounts.indexOf(tweet.user.screen_name) === -1) {
+        if (botAccounts.indexOf(tweet.user.screen_name) === -1 & typeof(tweet.retweeted_status)==="undefined") {
             TwitterBot.post(
                 "statuses/retweet/:id",
                 { id: retweetID },
