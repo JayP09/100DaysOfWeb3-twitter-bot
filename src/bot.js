@@ -13,12 +13,13 @@ var stream = TwitterBot.stream("statuses/filter", {
     track: ["#100DaysOfWeb3"],
 });
 
+var botAccounts = ['LebotPython','RobotProud','100xcode','KeepCoding_Bot','xaelbot','Bills_Bot','_100DaysOfWeb3']
+
 const retweetAndLike = () =>
     stream.on("tweet", function (tweet) {
         let retweetID = tweet.id_str;
-
         // Retweet Tweet with id "retweetID"
-        if (tweet.user.screen_name !== "_100DaysOfWeb3") {
+        if (botAccounts.indexOf(tweet.user.screen_name) !== -1) {
             TwitterBot.post(
                 "statuses/retweet/:id",
                 { id: retweetID },
