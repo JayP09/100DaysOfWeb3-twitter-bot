@@ -21,7 +21,7 @@ const retweetAndLike = () =>
         let retweetID = tweet.id_str;
         console.log(botAccounts.indexOf(tweet.user.screen_name))
         // Retweet Tweet with id "retweetID"
-        if (botAccounts.indexOf(tweet.user.screen_name) !== -1) {
+        if (botAccounts.indexOf(tweet.user.screen_name) === -1) {
             TwitterBot.post(
                 "statuses/retweet/:id",
                 { id: retweetID },
