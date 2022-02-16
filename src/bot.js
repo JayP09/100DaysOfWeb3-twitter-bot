@@ -13,7 +13,7 @@ var stream = TwitterBot.stream("statuses/filter", {
     track: ["#100DaysOfWeb3"],
 });
 
-var botAccounts = ['LebotPython','RobotProud','100xcode','KeepCoding_Bot','xaelbot','Bills_Bot','_100DaysOfWeb3','100daysofcoders']
+var botAccounts = ['LebotPython','RobotProud','100xcode','KeepCoding_Bot','xaelbot','Bills_Bot','_100DaysOfWeb3','100daysofcoders','IamEmmaBot','2Bftawfik']
 
 const retweetAndLike = () =>
     stream.on("tweet", function (tweet) {
