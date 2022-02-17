@@ -16,11 +16,10 @@ var stream = TwitterBot.stream("statuses/filter", {
 const retweetAndLike = () =>
     stream.on("tweet", function (tweet) {
         console.log("==> Tweet Received")
-        
         let retweetID = tweet.id_str;
 
         // Retweet Tweet with id "retweetID"
-        if (typeof(tweet.retweeted_status)==="undefined") {
+        if (typeof(tweet.retweeted_status) === "undefined" & tweet.text.length >= 100) {
             TwitterBot.post(
                 "statuses/retweet/:id",
                 { id: retweetID },
