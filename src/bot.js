@@ -10,7 +10,7 @@ const TwitterBot = new Twit(config.twitterKeys);
 
 // filter the twitter public stream by the words provided
 var stream = TwitterBot.stream("statuses/filter", {
-    track: ["#100DaysOfWeb3"],
+    track: ["#100DaysOfWeb3","#100DaysOfDeFI","#HackthisWeb3"],
 });
 
 const retweetAndLike = () =>
